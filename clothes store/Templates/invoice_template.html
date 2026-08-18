@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>فاتورة بيع - متجر بن محفوظ</title>
+    <style>
+        body {
+            font-family: 'Arial', 'Times New Roman', sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+        }
+
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .company-info {
+            margin: 10px 0;
+            color: #7f8c8d;
+        }
+
+        .invoice-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .info-value {
+            color: #34495e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #fff;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .totals {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .grand-total {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e74c3c;
+            border-top: 2px solid #bdc3c7;
+            padding-top: 10px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 14px;
+            border-top: 1px solid #bdc3c7;
+            padding-top: 20px;
+        }
+
+        .thank-you {
+            font-size: 16px;
+            color: #27ae60;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="company-name">متجر بن محفوظ</div>
+        <div class="company-info">صنعاء-اليمن</div>
+        <div class="company-info">الهاتف:+967 774731140</div>
+    </div>
+
+    <div class="invoice-info">
+        <div class="info-row">
+            <span class="info-label">رقم الفاتورة:</span>
+            <span class="info-value">{{SaleID}}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">تاريخ الفاتورة:</span>
+            <span class="info-value">{{SaleDate}}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">اسم العميل:</span>
+            <span class="info-value">{{CustomerName}}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">هاتف العميل:</span>
+            <span class="info-value">{{Phone}}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">عنوان العميل:</span>
+            <span class="info-value">{{Address}}</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">اسم المحاسب:</span>
+            <span class="info-value">{{CashierName}}</span>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>اسم المنتج</th>
+                <th>الباركود</th>
+                <th>الكمية</th>

@@ -1,0 +1,25 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio cache
+*.cache
+
+# NuGet
+packages/*
+!packages/repositories.config
+
+# Temporary files
+*.tmp
+*.log
+
+# Database temporary files
+*.mdf
+*.ldf
+# Local SQL Server database
+binmahfoz
